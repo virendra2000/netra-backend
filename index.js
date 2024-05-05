@@ -7,12 +7,12 @@ connection();
 const app = express();
 app.use(express.json());
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: 'https://netraai.vercel.app/',
     credentials: true,
 }));
 app.use((req, res, next) => {
     res.header('Access-Control-Expose-Headers', 'jwtoken');
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:5173')
+    res.setHeader('Access-Control-Allow-Origin', 'https://netraai.vercel.app/')
     next();
   });
 app.use(cookieParser());
