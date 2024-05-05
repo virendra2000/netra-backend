@@ -3,7 +3,7 @@ const Security = require("../models/SecuritySchema");
 const jwt = require('jsonwebtoken');
 const authenticate = async (req, res, next) => {
     try {
-        res.setHeader('Access-Control-Allow-Origin', 'https://netraai.vercel.app/');
+        res.setHeader('Access-Control-Allow-Origin', 'https://netraai.vercel.app');
         const token = req.headers['jwtoken'];
         if (!token) {
             return res.status(401).send('Unauthorized: No Token Provided');
